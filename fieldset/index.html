@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playing with Fieldsets</title>
+</head>
+<body>
+    <h1>Medical Intake Survey.</h1>
+    <form action="/fieldset-database" method="post">
+        <fieldset>
+            <legend>Allergies</legend>
+            <label for="pollen">Pollen</label>
+            <input type="checkbox" name="pollen_allergy" id="pollen">
+            
+            <label for="pet">Pet</label>
+            <input type="checkbox" name="pet_allergy" id="pet">
+            
+            <label for="drug">Drug</label>
+            <input type="checkbox" name="drug_allergy" id="drug">
+
+            
+        </fieldset>
+    </form>
+</body>
+</html>
