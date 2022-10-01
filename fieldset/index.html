@@ -9,18 +9,88 @@
 <body>
     <h1>Medical Intake Survey.</h1>
     <form action="/fieldset-database" method="post">
+        <p>
+            Required fields are followed by
+            <strong><span aria-label="required">*</span></strong>
+        </p>
+        <section>
+            <h2>Patient Information</h2>
+            <div>
+                <label for="lastname">Last Name:</label>
+                <input type="text" name="patient-last-name" id="lastname">
+    
+                <label for="firstname">First Name:</label>
+                <input type="text" name="patient-first-name" id="firstname">
+
+                <label for="mi">MI:</label>
+                <input type="text"name="patient-m-init" id="mi">
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" name="patient-dob" id="dob">
+            </div>
+            <div>
+                <label for="age">Age:</label>
+                <input type="number" name="patient-age" id="age">
+
+                <label for="gender">Gender:</label>
+                <select name="patient-gender" id="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Transgender">Transgender</option>
+                    <option value="Fluid">Gender Fluid</option>
+                </select>
+
+                <label for="ssn">Social Security #:</label>
+                <input type="password" name="patient-ssn" id="ssn">
+            </div>
+            <div>
+                <div>
+                    <label for="street">Street:</label>
+                    <input type="text" name="patient-street" id="street">
+                </div>
+                <div>
+                    <label for="city">City:</label>
+                    <input type="text" name="patient-city" id="city">
+                    
+                    <label for="state">State:</label>
+                    <input type="text" name="patient-state" id="state">
+
+                    <label for="zip">Zip Code:</label>
+                    <input type="text" name="patient-zip" id="zip">
+                </div>
+                <div>
+                    <label for="county">County:</label>
+                    <input type="text" name="patient-county" id="county">
+                    
+                    <label for="Country">Country:</label>
+                    <input type="text" name="patient-country" id="country">
+                </div>
+            </div>
+        </section>   
+    
         <fieldset>
             <legend>Allergies</legend>
-            <label for="pollen">Pollen</label>
+
+            <label for="pollen">Pollen Allergy</label>
             <input type="checkbox" name="pollen_allergy" id="pollen">
             
-            <label for="pet">Pet</label>
+            <label for="pet">Pet Allergy</label>
             <input type="checkbox" name="pet_allergy" id="pet">
             
-            <label for="drug">Drug</label>
+            <label for="drug">Drug Allergy</label>
             <input type="checkbox" name="drug_allergy" id="drug">
 
-            
+            <label for="food">Food Allergy</label>
+            <input type="checkbox" name="food_allergy" id="food">
+
+            <label for="insect">Insect Allergy</label>
+            <input type="checkbox" name="insect_allergy" id="insect">
+
+            <label for="latex">Latex Allergy</label>
+            <input type="checkbox" name="latex_allergy" id="latex">
+
+            <label for="mold">Mold Allergy</label>
+            <input type="checkbox" name="mold_allergy " id="mold">
         </fieldset>
     </form>
 </body>
