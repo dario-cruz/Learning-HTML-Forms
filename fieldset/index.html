@@ -30,7 +30,7 @@
             </div>
             <div>
                 <label for="age">Age:</label>
-                <input type="number" name="patient-age" id="age">
+                <input type="number" name="patient-age" id="age" min="1" max="99">
 
                 <label for="gender">Gender:</label>
                 <select name="patient-gender" id="gender">
@@ -64,6 +64,13 @@
                     
                     <label for="Country">Country:</label>
                     <input type="text" name="patient-country" id="country">
+                </div>
+                <div>
+                    <label for="email">E-mail</label>
+                    <input type="email" name="patient-email" id="email">
+
+                    <label for="phone">Phone #:</label>
+                    <input type="tel" name="patient-phone" id="phone">
                 </div>
             </div>
         </section>   
@@ -136,8 +143,7 @@
                 <input type="text" name="policy-number" id="pnumber">
 
                 <label for="inphone">Insurance Phone #:</label>
-                <input type="text" name="insurance-phone" id="inphone">
-                
+                <input type="tel" name="insurance-phone" id="inphone">
             </div>
 
         
