@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
     <title>Playing with Fieldsets</title>
 </head>
 <body>
@@ -13,7 +14,7 @@
             Required fields are followed by
             <strong><span aria-label="required">*</span></strong>
         </p>
-        <section>
+        <section class="info">
             <h2>Patient Information</h2>
             <div>
                 <label for="lastname">Last Name:</label>
@@ -74,7 +75,7 @@
                 </div>
             </div>
         </section>   
-        <section>
+        <section class="issues">
             <h2>Medical Issues</h2>
             <fieldset>
                 <legend>Allergies</legend>
@@ -125,11 +126,36 @@
                 <label for="sache">Stomach Ache</label>
                 <input type="checkbox" name="condition-sache" id="sache">
             </fieldset>
+
+            <fieldset>
+                <legend>Pain</legend>
+
+                <label for="chest">Chest</label>
+                <input type="checkbox" name="pain-chest" id="chest">
+
+                <label for="back">Back</label>
+                <input type="checkbox" name="pain-back" id="back">
+
+                <label for="knee">Knee</label>
+                <input type="checkbox" name="pain-knee" id="knee">
+
+                <label for="foot">Foot</label>
+                <input type="checkbox" name="pain-foot" id="foot">
+
+                <label for="head">Head</label>
+                <input type="checkbox" name="pain-head" id="head">
+
+                <label for="eye">Eye</label>
+                <input type="checkbox" name="pain-eye" id="eye">
+
+                <label for="ankle">Ankle</label>
+                <input type="checkbox" name="pain-ankle" id="ankle">
+            </fieldset>
             
             <label for="other-info">Other Condition or Symptoms</label>
             <textarea name="condition-oinfo" id="other-info" cols="30" rows="10">Enter details here.</textarea>
         </section>
-        <section>
+        <section class="payment">
             <h2>Payment Info:</h2>
             <div>
                 <label for="pname">Party Responsible for Payment</label>
@@ -145,10 +171,11 @@
                 <label for="inphone">Insurance Phone #:</label>
                 <input type="tel" name="insurance-phone" id="inphone">
             </div>
-
-        
         </section>
-
+        <section>
+            <button type="reset">Reset Form</button>
+            <button type="submit">Submit Form</button>
+        </section>
     </form>
 </body>
 </html>
