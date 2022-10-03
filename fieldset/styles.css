@@ -2,5 +2,23 @@
     /* border: solid black 2px; */
 }
 
+body {
+    text-align: center;
+}
 
+/* Centering of form element. */
+form {
+    display: inline-block;
+}
+
+/* input[type=text] {
+   width: auto; 
+} */
+
+
+
+/* Centering of the main heading./ */
+.title {
+    text-align: center;
+}
 
