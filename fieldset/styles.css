@@ -1,9 +1,18 @@
 * {
     /* border: solid black 2px; */
 }
+/* Custom CSS variables */
+:root {
+    --background-header: #AEBDCA;
+    --background-main: #F5EFE6;
+    --background-dark: #7895B2;
+    --background-paper: #E8DFCA;
+}
 
 body {
+    background-color: var(--background-main);
     text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Centering of form element. */
@@ -11,14 +20,23 @@ form {
     display: inline-block;
 }
 
-/* input[type=text] {
-   width: auto; 
-} */
-
-
+/* Framing for form. */
+div.formframe {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /* Centering of the main heading./ */
 .title {
     text-align: center;
 }
 
+div.heading {
+    background-color: var(--background-header);
+    border-bottom: solid var(--background-dark) 10px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}

@@ -8,174 +8,176 @@
     <title>Playing with Fieldsets</title>
 </head>
 <body>
-    <h1 class="title">Medical Intake Survey.</h1>
-    <form class="medform" action="/fieldset-database" method="post">
-        <p>
-            Required fields are followed by
-            <strong><span aria-label="required">*</span></strong>
-        </p>
-        <section class="info">
-            <h2>Patient Information</h2>
-            <div class="row1">
-                <label for="lastname">Last Name:</label>
-                <input type="text" name="patient-last-name" id="lastname">
+    <div class="heading">
+        <h1 class="title">Medical Intake Survey.</h1>
+    </div>
+    <div class="formframe">
+        <form class="medform" action="/fieldset-database" method="post">
+            <p>
+                Required fields are followed by
+                <strong><span aria-label="required">*</span></strong>
+            </p>
+            <section class="info">
+                <h2>Patient Information</h2>
+                <div class="row1">
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" name="patient-last-name" id="lastname">
+        
+                    <label for="firstname">First Name:</label>
+                    <input type="text" name="patient-first-name" id="firstname">
     
-                <label for="firstname">First Name:</label>
-                <input type="text" name="patient-first-name" id="firstname">
-
-                <label for="mi">MI:</label>
-                <input type="text"name="patient-m-init" id="mi">
-
-                <label for="dob">Date of Birth:</label>
-                <input type="date" name="patient-dob" id="dob">
-            </div>
-            <div>
-                <label for="age">Age:</label>
-                <input type="number" name="patient-age" id="age" min="1" max="99">
-
-                <label for="gender">Gender:</label>
-                <select name="patient-gender" id="gender">
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                    <option value="Transgender">Transgender</option>
-                    <option value="Fluid">Gender Fluid</option>
-                </select>
-
-                <label for="ssn">Social Security #:</label>
-                <input type="password" name="patient-ssn" id="ssn">
-            </div>
-            <div>
-                <div>
-                    <label for="street">Street:</label>
-                    <input type="text" name="patient-street" id="street">
+                    <label for="mi">MI:</label>
+                    <input type="text"name="patient-m-init" id="mi">
+    
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" name="patient-dob" id="dob">
                 </div>
                 <div>
-                    <label for="city">City:</label>
-                    <input type="text" name="patient-city" id="city">
+                    <label for="age">Age:</label>
+                    <input type="number" name="patient-age" id="age" min="1" max="99">
+    
+                    <label for="gender">Gender:</label>
+                    <select name="patient-gender" id="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Transgender">Transgender</option>
+                        <option value="Fluid">Gender Fluid</option>
+                    </select>
+    
+                    <label for="ssn">Social Security #:</label>
+                    <input type="password" name="patient-ssn" id="ssn">
+                </div>
+                <div>
+                    <div>
+                        <label for="street">Street:</label>
+                        <input type="text" name="patient-street" id="street">
+                    </div>
+                    <div>
+                        <label for="city">City:</label>
+                        <input type="text" name="patient-city" id="city">
+                        
+                        <label for="state">State:</label>
+                        <input type="text" name="patient-state" id="state">
+    
+                        <label for="zip">Zip Code:</label>
+                        <input type="text" name="patient-zip" id="zip">
+                    </div>
+                    <div>
+                        <label for="county">County:</label>
+                        <input type="text" name="patient-county" id="county">
+                        
+                        <label for="Country">Country:</label>
+                        <input type="text" name="patient-country" id="country">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="patient-email" id="email">
+    
+                        <label for="phone">Phone #:</label>
+                        <input type="tel" name="patient-phone" id="phone">
+                    </div>
+                </div>
+            </section>   
+            <section class="issues">
+                <h2>Medical Issues</h2>
+                <fieldset>
+                    <legend>Allergies</legend>
+        
+                    <label for="pollen">Pollen Allergy</label>
+                    <input type="checkbox" name="pollen_allergy" id="pollen">
                     
-                    <label for="state">State:</label>
-                    <input type="text" name="patient-state" id="state">
-
-                    <label for="zip">Zip Code:</label>
-                    <input type="text" name="patient-zip" id="zip">
-                </div>
-                <div>
-                    <label for="county">County:</label>
-                    <input type="text" name="patient-county" id="county">
+                    <label for="pet">Pet Allergy</label>
+                    <input type="checkbox" name="pet_allergy" id="pet">
                     
-                    <label for="Country">Country:</label>
-                    <input type="text" name="patient-country" id="country">
+                    <label for="drug">Drug Allergy</label>
+                    <input type="checkbox" name="drug_allergy" id="drug">
+        
+                    <label for="food">Food Allergy</label>
+                    <input type="checkbox" name="food_allergy" id="food">
+        
+                    <label for="insect">Insect Allergy</label>
+                    <input type="checkbox" name="insect_allergy" id="insect">
+        
+                    <label for="latex">Latex Allergy</label>
+                    <input type="checkbox" name="latex_allergy" id="latex">
+        
+                    <label for="mold">Mold Allergy</label>
+                    <input type="checkbox" name="mold_allergy " id="mold">
+                </fieldset>
+    
+                <fieldset>
+                    <legend>Conditions</legend>
+    
+                    <label for="heartpalps">Heart Palpitations</label>
+                    <input type="checkbox" name="condition-heart-p" id="heartpalps">
+    
+                    <label for="anemia">Anemia</label>
+                    <input type="checkbox" name="condition-anemia" id="anemia">
+    
+                    <label for="headaches">Headaches</label>
+                    <input type="checkbox" name="condition-headache" id="headaches">
+    
+                    <label for="diarrhea">Diarrhea</label>
+                    <input type="checkbox" name="condition-diarrhea" id="diarrhea">
+    
+                    <label for="pinkeye">Pink Eye</label>
+                    <input type="checkbox" name="condition-pinkeye" id="pinkeye">
+    
+                    <label for="mono">Mononucleosis</label>
+                    <input type="checkbox" name="condition-mono" id="mono">
+    
+                    <label for="sache">Stomach Ache</label>
+                    <input type="checkbox" name="condition-sache" id="sache">
+                </fieldset>
+    
+                <fieldset>
+                    <legend>Pain</legend>
+    
+                    <label for="chest">Chest</label>
+                    <input type="checkbox" name="pain-chest" id="chest">
+    
+                    <label for="back">Back</label>
+                    <input type="checkbox" name="pain-back" id="back">
+    
+                    <label for="knee">Knee</label>
+                    <input type="checkbox" name="pain-knee" id="knee">
+    
+                    <label for="foot">Foot</label>
+                    <input type="checkbox" name="pain-foot" id="foot">
+    
+                    <label for="head">Head</label>
+                    <input type="checkbox" name="pain-head" id="head">
+    
+                    <label for="eye">Eye</label>
+                    <input type="checkbox" name="pain-eye" id="eye">
+    
+                    <label for="ankle">Ankle</label>
+                    <input type="checkbox" name="pain-ankle" id="ankle">
+                </fieldset>
+                
+                <label for="other-info">Other Condition or Symptoms</label>
+                <textarea name="condition-oinfo" id="other-info" cols="30" rows="10">Enter details here.</textarea>
+            </section>
+            <section class="payment">
+                <h2>Payment Info:</h2>
+                <div>
+                    <label for="pname">Party Responsible for Payment</label>
+                    <input type="text" name="pay-name" id="pname">
+        
+                    <label for="provider">Insurance Provide</label>
+                    <input type="text" name="pay-provider" id="provider">
                 </div>
                 <div>
-                    <label for="email">E-mail</label>
-                    <input type="email" name="patient-email" id="email">
-
-                    <label for="phone">Phone #:</label>
-                    <input type="tel" name="patient-phone" id="phone">
+                    <label for="pnumber">Policy #:</label>
+                    <input type="text" name="policy-number" id="pnumber">
+    
+                    <label for="inphone">Insurance Phone #:</label>
+                    <input type="tel" name="insurance-phone" id="inphone">
                 </div>
-            </div>
-        </section>   
-        <section class="issues">
-            <h2>Medical Issues</h2>
-            <fieldset>
-                <legend>Allergies</legend>
-    
-                <label for="pollen">Pollen Allergy</label>
-                <input type="checkbox" name="pollen_allergy" id="pollen">
-                
-                <label for="pet">Pet Allergy</label>
-                <input type="checkbox" name="pet_allergy" id="pet">
-                
-                <label for="drug">Drug Allergy</label>
-                <input type="checkbox" name="drug_allergy" id="drug">
-    
-                <label for="food">Food Allergy</label>
-                <input type="checkbox" name="food_allergy" id="food">
-    
-                <label for="insect">Insect Allergy</label>
-                <input type="checkbox" name="insect_allergy" id="insect">
-    
-                <label for="latex">Latex Allergy</label>
-                <input type="checkbox" name="latex_allergy" id="latex">
-    
-                <label for="mold">Mold Allergy</label>
-                <input type="checkbox" name="mold_allergy " id="mold">
-            </fieldset>
-
-            <fieldset>
-                <legend>Conditions</legend>
-
-                <label for="heartpalps">Heart Palpitations</label>
-                <input type="checkbox" name="condition-heart-p" id="heartpalps">
-
-                <label for="anemia">Anemia</label>
-                <input type="checkbox" name="condition-anemia" id="anemia">
-
-                <label for="headaches">Headaches</label>
-                <input type="checkbox" name="condition-headache" id="headaches">
-
-                <label for="diarrhea">Diarrhea</label>
-                <input type="checkbox" name="condition-diarrhea" id="diarrhea">
-
-                <label for="pinkeye">Pink Eye</label>
-                <input type="checkbox" name="condition-pinkeye" id="pinkeye">
-
-                <label for="mono">Mononucleosis</label>
-                <input type="checkbox" name="condition-mono" id="mono">
-
-                <label for="sache">Stomach Ache</label>
-                <input type="checkbox" name="condition-sache" id="sache">
-            </fieldset>
-
-            <fieldset>
-                <legend>Pain</legend>
-
-                <label for="chest">Chest</label>
-                <input type="checkbox" name="pain-chest" id="chest">
-
-                <label for="back">Back</label>
-                <input type="checkbox" name="pain-back" id="back">
-
-                <label for="knee">Knee</label>
-                <input type="checkbox" name="pain-knee" id="knee">
-
-                <label for="foot">Foot</label>
-                <input type="checkbox" name="pain-foot" id="foot">
-
-                <label for="head">Head</label>
-                <input type="checkbox" name="pain-head" id="head">
-
-                <label for="eye">Eye</label>
-                <input type="checkbox" name="pain-eye" id="eye">
-
-                <label for="ankle">Ankle</label>
-                <input type="checkbox" name="pain-ankle" id="ankle">
-            </fieldset>
-            
-            <label for="other-info">Other Condition or Symptoms</label>
-            <textarea name="condition-oinfo" id="other-info" cols="30" rows="10">Enter details here.</textarea>
-        </section>
-        <section class="payment">
-            <h2>Payment Info:</h2>
-            <div>
-                <label for="pname">Party Responsible for Payment</label>
-                <input type="text" name="pay-name" id="pname">
-    
-                <label for="provider">Insurance Provide</label>
-                <input type="text" name="pay-provider" id="provider">
-            </div>
-            <div>
-                <label for="pnumber">Policy #:</label>
-                <input type="text" name="policy-number" id="pnumber">
-
-                <label for="inphone">Insurance Phone #:</label>
-                <input type="tel" name="insurance-phone" id="inphone">
-            </div>
-        </section>
-        <section>
-            <button type="reset">Reset Form</button>
-            <button type="submit">Submit Form</button>
-        </section>
-    </form>
+            </section>
+            <section>
+                <button type="reset">Reset Form</button>
+                <button type="submit">Submit Form</button>
+            </section>
+        </form>
+    </div>
 </body>
 </html>
