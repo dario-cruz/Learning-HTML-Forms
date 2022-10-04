@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="heading">
-        <h1 class="title">Medical Intake Survey.</h1>
+        <h1 class="title">Medical Intake Survey</h1>
     </div>
     <div class="formframe">
         <form class="medform" action="/fieldset-database" method="post">
@@ -18,23 +18,23 @@
                 <strong><span aria-label="required">*</span></strong>
             </p>
             <section class="info">
-                <h2>Patient Information</h2>
+                <h2 class="headtwo">Patient Information</h2>
                 <div class="row1">
                     <label for="lastname">Last Name:</label>
-                    <input type="text" name="patient-last-name" id="lastname">
+                    <input type="text" name="patient-last-name" id="lastname" placeholder="Doe" required>
         
                     <label for="firstname">First Name:</label>
-                    <input type="text" name="patient-first-name" id="firstname">
+                    <input type="text" name="patient-first-name" id="firstname" placeholder="John" required>
     
                     <label for="mi">MI:</label>
-                    <input type="text"name="patient-m-init" id="mi">
+                    <input type="text"name="patient-m-init" id="mi" maxlength="1" placeholder="P">
     
                     <label for="dob">Date of Birth:</label>
-                    <input type="date" name="patient-dob" id="dob">
+                    <input type="date" name="patient-dob" id="dob" required>
                 </div>
                 <div>
                     <label for="age">Age:</label>
-                    <input type="number" name="patient-age" id="age" min="1" max="99">
+                    <input type="number" name="patient-age" id="age" min="1" max="99" maxlength="2" placeholder="10" required>
     
                     <label for="gender">Gender:</label>
                     <select name="patient-gender" id="gender">
@@ -45,14 +45,12 @@
                     </select>
     
                     <label for="ssn">Social Security #:</label>
-                    <input type="password" name="patient-ssn" id="ssn">
+                    <input type="password" name="patient-ssn" id="ssn" maxlength="9" placeholder="555-555-5555" required>
                 </div>
                 <div>
                     <div>
                         <label for="street">Street:</label>
                         <input type="text" name="patient-street" id="street">
-                    </div>
-                    <div>
                         <label for="city">City:</label>
                         <input type="text" name="patient-city" id="city">
                         
@@ -60,7 +58,7 @@
                         <input type="text" name="patient-state" id="state">
     
                         <label for="zip">Zip Code:</label>
-                        <input type="text" name="patient-zip" id="zip">
+                        <input type="text" name="patient-zip" id="zip" pattern="[\d]{5}">
                     </div>
                     <div>
                         <label for="county">County:</label>
@@ -77,7 +75,7 @@
                 </div>
             </section>   
             <section class="issues">
-                <h2>Medical Issues</h2>
+                <h2 class="headtwo">Medical Issues</h2>
                 <fieldset>
                     <legend>Allergies</legend>
         
@@ -157,7 +155,7 @@
                 <textarea name="condition-oinfo" id="other-info" cols="30" rows="10">Enter details here.</textarea>
             </section>
             <section class="payment">
-                <h2>Payment Info:</h2>
+                <h2 class="headtwo">Payment Info:</h2>
                 <div>
                     <label for="pname">Party Responsible for Payment</label>
                     <input type="text" name="pay-name" id="pname">
